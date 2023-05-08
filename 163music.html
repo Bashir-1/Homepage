@@ -136,8 +136,84 @@
             </div>
         </div>
     </div>
-</section><script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8993f6f9-2319-400a-a8a0-13458d99304d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  <!--网站右下角弹窗通知-->
+  <script src="https://kit.fontawesome.com/9c90ee3d2e.js" crossorigin="anonymous"></script>
+  <style>
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 320px;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: rgb(240, 253, 244);
+      border-radius: 0.375rem;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .notification-heading {
+      font-weight: bold;
+      color: rgb(22, 101, 52);
+    }
+    
+    .notification-message {
+      margin-top: 0.5rem;
+      font-size: 14px;
+      color: rgb(21, 128, 61);
+    }
+    
+    .notification-buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.875rem;
+    }
+    
+    .notification-button {
+      padding: 0.375rem 0.75rem;
+      background-color: #ECFDF5;
+      color: rgb(22, 101, 52);
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: bold;
+      border-radius: 0.375rem;
+      border: none;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+    
+    .notification-button:hover {
+      background-color: #D1FAE5;
+    }
+    </style>
+    
+    <div class="notification">
+      <div class="notification-content">
+        <div class="notification-heading"><i class="fa-sharp fa-solid fa-circle-info"></i> 提示</div>
+        <div class="notification-message"><p>本站针对中国大陆访问速率进行了优化调整，访问速率进一步提高；</p>
+          <p>如若发现本站响应速度十分之慢，可以使用Cloudflare WARP+或Whale加速访问。</p>
+        </div>
+        <div class="notification-buttons">
+          <a href="https://blog.ncc17039.top/2023/01-cf" target="_blank">
+          <button type="button" class="notification-button">查看教程</button></a>
+          <a href="https://update.ncc17039.top/" target="_blank">
+          <button type="button" class="notification-button">更新日志</button></a>
+          <button type="button" class="notification-button notification-dismiss">关闭通知</button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      const notificationDismissButton = document.querySelector('.notification-dismiss');
+      const notification = document.querySelector('.notification');
+      notificationDismissButton.addEventListener('click', () => {
+        notification.style.display = 'none';
+      });
+    </script>
   
 </body>
 </html>
